@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Soft Tech software Company</h1>
+    <h3>Employee Leave Management System</h3>
+</header>
+
+<!-- Dashboard Summary Cards -->
+<div class="dashboard-summary">
+
+    <div class="summary-card total-card">
+        <h3>Total Leaves</h3>
+        <p id="totalCount">0</p>
+    </div>
+
+    <div class="summary-card pending-card">
+        <h3>Pending</h3>
+        <p id="pendingCount">0</p>
+    </div>
+
+    <div class="summary-card approved-card">
+        <h3>Approved</h3>
+        <p id="approvedCount">0</p>
+    </div>
+
+    <div class="summary-card rejected-card">
+        <h3>Rejected</h3>
+        <p id="rejectedCount">0</p>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <!-- Employee Details -->
+    <div class="card">
+        <h3>Employee Details</h3>
+
+        <label>Employee Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label>Employee ID</label>
+        <input type="text" id="empid" placeholder="Enter Employee ID">
+    </div>
+
+    <!-- Apply Leave -->
+    <div class="card">
+        <h3>Apply Leave</h3>
+
+        <label>Leave Type</label>
+
+        <select id="leaveType">
+            <option>Casual Leave</option>
+            <option>Sick Leave</option>
+            <option>Earned Leave</option>
+            <option>Work From Home</option>
+        </select>
+
+        <label>From Date</label>
+        <input type="date" id="fromDate">
+
+        <label>To Date</label>
+        <input type="date" id="toDate">
+
+        <label>Reason</label>
+        <textarea id="reason" rows="4"></textarea>
+
+        <button type="button" onclick="applyLeave()">Apply Leave</button>
+    </div>
+
+    <!-- Leave History -->
+    <div class="card">
+        <h3>Leave History</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Leave Type</th>
+                    <th>From Date</th>
+                    <th>To Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="leaveTable">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
